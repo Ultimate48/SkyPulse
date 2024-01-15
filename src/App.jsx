@@ -3,8 +3,6 @@ import { useState } from 'react'
 
 function DisplayCities(cities) {
 
-  console.log(cities.cities)
-
   return (
     <>
     { cities.cities.length !== 0 ?
@@ -91,20 +89,18 @@ function ThisWeek(){
 
 export default function App() {
 
-  const [cities, setCities] = useState(["Birmingham", "Manchester", "New York", "California"])
-
-  console.log(cities)
+  const [cities, setCities] = useState(["Birmingham", "Mumbai", "Delhi", "Agra"])
 
   return (
     <div className="relative bg-cover bg-no-repeat bg-center h-screen w-screen"
     style={{ backgroundImage: 'url("./src/assets/Rainy-min.png")' }}
   >
     
-        <div className='backdrop-blur-xl h-screen absolute right-0 w-[500px]'>
+        <div className='backdrop-blur-xl h-screen absolute right-0 w-[500px]'> 
         </div>
         <div className='h-screen absolute right-0 w-[500px] backdrop-blur-lg bg-black opacity-20'>
         </div>
-        <div className='h-screen absolute right-0 w-[500px] overflow-auto'>
+        <div className='h-screen absolute right-0 w-[500px] overflow-auto'> 
           <div className='absolute right-0 w-20 h-20 bg-[#829f9a] flex justify-center items-center cursor-pointer'>
             <img src='./src/assets/download.svg' className='h-8 w-8' />
           </div>
@@ -119,7 +115,7 @@ export default function App() {
           </div>
         </div>
         <div className='absolute bottom-20 left-20'>
-          {/* <Weather /> */}
+          <Weather />
         </div>
       </div>
   )
